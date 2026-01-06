@@ -1,59 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Sk homemade Candles and soaps</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html"><img src="assets/logo.png" alt="Logo" width="40" height="40" /><span class="brand">Sk homemade Candles and soaps</span></a>
-      <nav class="primary-nav">
+  <header>
+    <div class="container">
+      <h1>Contact</h1>
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <h1>Contact</h1>
-    <p>Use the form below to send a message. Replace the action URL with your Formspree endpoint or your own backend.</p>
+  <section class="section">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Email me at <a href="mailto:you@example.com">you@example.com</a></p>
+      <!-- Optional contact form -->
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <label>Your Name:</label><br>
+        <input type="text" name="name" required><br><br>
+        <label>Your Email:</label><br>
+        <input type="email" name="_replyto" required><br><br>
+        <label>Message:</label><br>
+        <textarea name="message" required></textarea><br><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
 
-    <form id="contact-form" class="form" method="POST" action="https://formspree.io/f/your-id">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required />
-
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit" class="btn primary">Send message</button>
-      <p id="form-status" role="status" aria-live="polite"></p>
-    </form>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year-contact"></span> Sk homemade Candles and soaps</p>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 My Portfolio. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year-contact').textContent = new Date().getFullYear();
-
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      var status = document.getElementById('form-status');
-      status.textContent = 'Sending...';
-    });
-  </script>
 </body>
 </html>
