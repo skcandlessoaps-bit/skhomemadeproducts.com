@@ -23,20 +23,20 @@ header {
   background: #333;
   color: #fff;
   padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 header h1 {
-  display: inline-block;
+  margin: 0;
 }
 
 nav ul {
   list-style: none;
-  float: right;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-left: 20px;
+  display: flex;
+  gap: 1rem;
 }
 
 nav a {
@@ -47,7 +47,7 @@ nav a {
 /* Hero Section */
 .hero {
   background: #f4f4f4;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
@@ -57,7 +57,7 @@ nav a {
 
 /* Sections */
 .section {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .section h2 {
@@ -85,4 +85,12 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
